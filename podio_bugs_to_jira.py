@@ -1,28 +1,3 @@
-"""
-migrate_podio_bugs_to_jira.py
-
-Purpose:
-    Migrate Podio Bugs tickets into Jira Bug issues.
-
-What this script does:
-    1. Authenticates to Podio and Jira
-    2. Scans Podio Bugs tickets page by page
-    3. Filters tickets by VPC value and attachment presence
-    4. Creates Jira Bug issues
-    5. Maps Podio fields to Jira fields:
-        - Podio Created On -> Jira Created Date
-        - Podio Created By -> Jira Reporter
-        - Podio Developer assigned -> Jira Developer
-    6. Uploads regular Podio file attachments
-    7. Adds Podio comments into Jira comments
-    8. Uploads Podio activity history as a .txt attachment
-
-Important:
-    - Store real credentials in .env
-    - Never commit .env to GitHub
-    - Commit .env.example instead
-"""
-
 import os
 import re
 import time
